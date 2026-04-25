@@ -1,0 +1,55 @@
+<%- include("./include/head", { title: "Error - " +  errormsg.toString()}) %>
+<body>
+<style>
+       @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+      body {
+        font-family: "Cabin Sketch", "cursive";
+        background-color: #151618;
+        color: white;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 2em;
+        margin-top: 0;
+      }
+      button {
+        padding: 1em 2em;
+        font-size: 1.5em;
+        background: linear-gradient(120deg, #9e40f5 0%, #11f1d3 100%);
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 1em;
+      }
+      button:hover {
+        transition: 0.5s;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+        background: linear-gradient(120deg, #9440f5 0%, #11f181 100%);
+        color: white;
+      }
+    </style>
+<div class="container">
+<div class="error">
+<div class="error-content">
+<img src="img/error.png"/>
+<h1>Oops! An unexpected error occured!</h1>
+<p><%= errormsg %></p>
+<button onclick="window.history.back()">Go Back</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

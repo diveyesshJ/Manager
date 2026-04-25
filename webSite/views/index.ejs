@@ -1,0 +1,95 @@
+<%- include("./include/head", { title: ""}) %>
+<body>
+  <%- include("./include/nav") %>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/milrato-sweetalert.css">
+    <link href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<style>
+.bg-indigo-600 {
+    --tw-bg-opacity: 1;
+    background-image: linear-gradient(-45deg, #ee7752, rgba(79,70,229, 1), #23a6d5, #23d5ab);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-family: "Poppins";
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
+    
+      <section style="margin-top: -5%;">
+        <div class="d-flex justify-content-center head">
+            <h1 style="font-weight: 900;">
+                <img src="https://media.discordapp.net/attachments/1091621552572870738/1100081822991384667/Logo-removebg-preview.png?width=644&height=644"class="avatar"/><br>
+                </span><b></b><span class="bg-indigo-600"><b style="color: !bold; font-size: 30px;"> Developer Tech™️ </span><b/></span>
+                </div>
+        <div class="d-flex justify-content-center subtext">
+            <p style="font-style: italic;font-size: 20px;">Make your bots without coding! Easy to use
+            <br>
+            <b>Available For Everyone</b>
+            <br>
+ <b><b style="color: white!bold; font-size: 18px;">Current Ping:</b> <span id="ping"><b style="color: white!bold; font-size: 18px;"><%= bot.ws.ping %></span> |  
+            <span id="creation"><b style="color: green!important; font-size: 18px;">Currently Working On The Website!</span>
+
+              </p>
+        </div>
+        </div>
+                  
+
+
+        
+        </section>
+      
+                  
+      <!-- FOOTER-->
+      <section>
+        <div class="card-footer" style="margin-top: -7%;text-align: center;color: #5663f7;">
+          <hr style="width: 75%;background-color: #FFFFFF!important;color: #FFFFFF!important;border: 5px solid #FFFFFF!important;border-radius:25px;margin-left: 12%;">
+          <h4><span style="font-size: 40px;">Developer Tech Manager</span>
+          </h4>
+          <h5 style="text-align: center;">
+            <a href="https://developertech.co.za" target="_blank" style="font-size: 12px; color: #888a9b!important;text-decoration: none;">&copy; Copyright developertech.co.za | All rights reserved | Ping: <%= bot.ws.ping %></a><br><br>
+          </h5>
+        </div>
+      </section>
+      <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.has('success') && urlParams.get('success')) {
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  showCloseButton: true,
+                  text: urlParams.get('message'),
+                  footer: 'Copyright 2021 Developer Tech - All right Reserved.'
+              }).then((result) => {
+                  window.location.href = urlParams.get("redirect")? urlParams.get("redirect") : "/";
+              })
+          }
+          if (urlParams.has('error') && urlParams.get('error')) {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'An Error occurred!',
+                  text: urlParams.get('message'),
+                  showCloseButton: true,
+                  footer: 'Copyright 2023 &copy Developer Tech - All Right Reserved.'
+              }).then((result) => {
+                  window.location.href = urlParams.get("redirect")? urlParams.get("redirect") : "/";
+              })
+          }
+      </script>
+      <!--JS-->
+      <script src="js/js-bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

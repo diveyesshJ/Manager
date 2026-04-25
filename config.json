@@ -1,0 +1,22 @@
+{
+  "prefix": "!",
+  "activity": "/help ⚒️ Managing Developer Tech",
+  "status": "idle",
+  
+  "developers": ["832663333529845772", "1048594307046711417"],
+
+  "color": {
+    "main"   : "BLUE",
+    "error"  : "#ff5f8e",
+    "success": "#99ff9c",
+
+    "red"   : "#ff5a48",
+    "orange": "#ffca4d",
+    "yellow": "#ffcc5c",
+    "green" : "#74ff89",
+    "purple": "#4E3DFB",
+    "pink"  : "#4E3DFB",
+    "grey"  : "#4b4b4b",
+    "white" : "#ffffff"
+  }
+}

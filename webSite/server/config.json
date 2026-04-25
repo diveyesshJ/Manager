@@ -1,0 +1,17 @@
+{
+ "website": {
+  "port" : "8080",
+  "callback": "https://bot-manager-or-developer-tech.criticalswateam.repl.co/callback",
+  "domain": "https://bot-manager-or-developer-tech.criticalswateam.repl.co/"
+ },
+
+ "client": {
+  "client_id": "952520332919570482",
+  "client_secret": "UdZDhw_L0uxZTDFmB26KeyS9foaHsZnC"
+ },
+ "server": {
+  "id": "941362510194417704",
+  "botcretorrole": "1083054237266747592",
+  "ticketcatagory": "1083054372528853022"
+ }
+}

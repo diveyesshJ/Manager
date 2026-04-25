@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg justify-content-center navbar-dark">
+ <a class="navbar-brand" href="/" style="position: relative;z-index: 1;text-decoration: none;color:white;">
+<link href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+
+   &nbsp;&nbsp;
+   
+   <a title="devtech" class="navbar-brand logoholder"><img id="logoimg" style="height:60px; width:70;" src="https://media.discordapp.net/attachments/1091621552572870738/1100081822991384667/Logo-removebg-preview.png?width=550&height=550" alt="devtech"/></a>
+  &nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <li class="nav-item">
+                <a href="/"><b style="color:white!important"><i class=""></i> Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a href="createbot"><b style="color:#56f799!important"><i class=""></i> Create a Bot</b></a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="team"><b style="color:#be3dfa!important"><i class=""></i> View Team</a>
+            </li>
+                  <% if(!user){ %>
+                  <li class="nav-item">
+                <a href="login"><b style="color:#56f799!important"><i class=""></i> Login</b></a>
+            </li>
+                  <% } else{ %>  
+                  <li class="nav-item">
+                <a href="logout"><b style="color:#f75656!important"><i class="1"></i> Logout</b></a>
+            </li>
+                  <% } %>
+</nav>
